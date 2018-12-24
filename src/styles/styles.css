@@ -1,0 +1,70 @@
+.temp{
+    font-size: 45px;
+  
+  }
+  .topData{
+    text-align:center;
+    font-family: 'Exo', sans-serif;
+  }
+  .weather{
+    font-size:28px;
+    margin-top : -15px;
+  }
+
+.bottomData{
+    margin-top: 50px;
+    text-align:center;
+    font-family: 'Exo', sans-serif;
+    font-size: 20px;
+}
+
+.inputForm{
+    display:flex;
+}
+
+.inputbox{
+    height:14px;
+}
+
+.submitbutton{
+    background-color: dodgerblue;
+    color: white;
+    border: none;
+    border-radius: 5%;
+    margin-left: 15px;
+}
+
+form{
+    margin:auto;
+}
+
+h1{
+    font-family: 'Goudy Bookletter 1911', serif;
+    font-size: 50px;
+    
+}
+
+.tempform{
+    margin: 15px auto 0px auto;
+}
+.tempunit{
+    border-radius: 3px;
+}
+.tempunitc {
+    margin-left : 5px;
+    border-radius: 3px;
+
+
+}
+
+.active{
+    background-color: dodgerblue;
+    color: white;
+    border: none;
+}
+
+.notactive{
+    background-color: white;
+    color:black;
+    border: 1px solid black;
+}
