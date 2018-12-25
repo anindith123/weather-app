@@ -1,5 +1,5 @@
 /* line 5, E:/udemy/react wheather/weather/src/styles/styles.scss */
-.aligned, .topbar, .topdata, .bottomData, footer {
+.aligned, .topbar, .topData, .bottomData, footer, .alert {
   text-align: center;
 }
 
@@ -20,7 +20,7 @@
 }
 
 /* line 26, E:/udemy/react wheather/weather/src/styles/styles.scss */
-.topdata {
+.topData {
   font-family: "Exo", sans-serif;
 }
 
@@ -71,40 +71,54 @@ h1 {
 }
 
 /* line 73, E:/udemy/react wheather/weather/src/styles/styles.scss */
+.tempform {
+  margin: 15px auto 0px auto;
+}
+
+/* line 77, E:/udemy/react wheather/weather/src/styles/styles.scss */
 .tempunit, .tempunitc {
   border-radius: 3px;
   height: 25px;
 }
 
-/* line 78, E:/udemy/react wheather/weather/src/styles/styles.scss */
+/* line 82, E:/udemy/react wheather/weather/src/styles/styles.scss */
 .tempunitc {
   margin-left: 5px;
 }
 
-/* line 83, E:/udemy/react wheather/weather/src/styles/styles.scss */
+/* line 87, E:/udemy/react wheather/weather/src/styles/styles.scss */
 .active {
   background-color: #4e6f8f;
   color: white;
   border: none;
 }
 
-/* line 89, E:/udemy/react wheather/weather/src/styles/styles.scss */
+/* line 93, E:/udemy/react wheather/weather/src/styles/styles.scss */
 .notactive {
   background-color: white;
   color: black;
   border: 1px solid black;
 }
 
-/* line 95, E:/udemy/react wheather/weather/src/styles/styles.scss */
+/* line 99, E:/udemy/react wheather/weather/src/styles/styles.scss */
 footer {
   margin: 100px auto 0px auto;
   background-color: orangered;
   color: black;
 }
 
-/* line 102, E:/udemy/react wheather/weather/src/styles/styles.scss */
+/* line 106, E:/udemy/react wheather/weather/src/styles/styles.scss */
 #root {
   height: 22vh;
+}
+
+/* line 110, E:/udemy/react wheather/weather/src/styles/styles.scss */
+.alert {
+  height: 20px;
+  margin-bottom: 100px auto 10px auto;
+  background-color: red;
+  color: white;
+  border-radius: 5%;
 }
 
 /*# sourceMappingURL=../../styles.map */

@@ -21,9 +21,12 @@ class Front extends Component {
     formSubmit(e) {
 
         e.preventDefault();
-        console.log("%%%%%%%%%%%%%%%%%%%%%%%%");
         let tar = e.target.name;
         var city = e.target.elements.city.value;
+        if(city === '') {
+            this.nodata(tar);
+        }
+        else {
         let unit = tar === "form1" ? this.state.unit1 : this.state.unit2;
         let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${unit}&appid=2c59be56d368f91e6857fe42090f8bd8`;
         axios.get(url)
@@ -35,6 +38,7 @@ class Front extends Component {
             .catch(function (error) {
                 console.log(error);
             })
+        }
     };
 
     fareinclick(e) {
@@ -54,10 +58,21 @@ class Front extends Component {
         this.setState({ compare: !this.state.compare });
     };
 
+    nodata(tar){
+        const div = document.createElement('div');
+        div.className = "alert";
+        div.appendChild(document.createTextNode('Enter city name'));
+        const container = document.querySelector('#'.concat('', ((tar) === 'form1' ? 'formcontainer1' : 'formcontainer2')));
+        const form = document.querySelector('#'.concat('', ((tar) === 'form1' ? 'inputform1' : 'inputform2')));
+        container.insertBefore(div, form);
+        setTimeout(() => document.querySelector('.alert').remove(),3000);
+
+    }
+
     render() {
         return <div style={{ display: " ".concat('', ((this.state.compare) ? "flex" : "grid")) }}>
-            <div style={{ margin: "auto" }}>
-                <div className="inputForm">
+            <div id="formcontainer1" style={{ margin: "auto" }}>
+                <div id="inputform1" className="inputForm">
                     <form name="form1" onSubmit={this.formSubmit} >
 
                         <input className="inputbox" type="text" name="city" placeholder="city" />
@@ -77,11 +92,12 @@ class Front extends Component {
 
             {/*-------------------------------------------------------------------------------------------------------*/}
 
-            <div style={{ margin: "auto", display: " ".concat('', ((this.state.compare) ? "block" : "none")) }}>
-                <div className="inputForm">
+            <div id="formcontainer2" style={{ margin: "auto", display: " ".concat('', ((this.state.compare) ? "block" : "none")) }}>
+            
+                <div id="inputform2" className="inputForm">
                     <form name="form2" onSubmit={this.formSubmit} >
 
-                        <input className="inputbox" type="text" name="city" placeholder="city" required />
+                        <input className="inputbox" type="text" name="city" placeholder="city" />
 
                         <button className="submitbutton" type="submit" value="submit">Get weather</button>
 
@@ -96,7 +112,8 @@ class Front extends Component {
                     </div>
                     <WeatherDesc citydata={this.state.citydata2} display={this.state.data_available2} />
                 </div>
-            </div>
+                </div>
+            
         </div>
 
 
