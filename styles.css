@@ -1,5 +1,5 @@
 /* line 5, E:/udemy/react wheather/weather/src/styles/styles.scss */
-.aligned, .topbar, .topData, .bottomData, footer {
+.aligned, .topbar, .topdata, .bottomData, footer {
   text-align: center;
 }
 
@@ -20,7 +20,7 @@
 }
 
 /* line 26, E:/udemy/react wheather/weather/src/styles/styles.scss */
-.topData {
+.topdata {
   font-family: "Exo", sans-serif;
 }
 

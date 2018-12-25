@@ -1,11 +1,17 @@
-import React,{Component} from 'react';
+import React, { Component } from 'react';
 import Front from './front';
-class Main extends Component{
+import Top from './top';
+import Footer from './footer';
+class Main extends Component {
     render() {
         return <div>
-            <Front/>
-        </div>
-    }
+        
+                <Top />
+                <Front />
 
-}
+                <Footer />
+            </div>
+            }
+        
+        }
 export default Main;
