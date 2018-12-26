@@ -6,6 +6,21 @@ $major-font : 'Exo', sans-serif;
     text-align : center;
 }
 
+@media(min-width: 768px){
+    .compare{
+        display:grid;
+        grid-template-columns: 2fr 2fr;
+    }
+}
+
+.compare{
+    @extend .nocompare;
+}
+
+.nocompare{
+    display:grid;
+}
+
 
 
 .topbar{
@@ -17,6 +32,7 @@ $major-font : 'Exo', sans-serif;
     background-image: url('media/bgground2.jpg');
     background-position:center;
     color:#9eb2da;
+    text-overflow: ellipsis;
 }
 
 .temp{
@@ -40,10 +56,6 @@ $major-font : 'Exo', sans-serif;
     font-size: $fsize - 20;
 }
 
-.inputForm{
-    display:flex;
-
-}
 
 .inputbox{
     height:20px;
@@ -55,14 +67,13 @@ $major-font : 'Exo', sans-serif;
     color: white;
     border: none;
     border-radius: 5%;
-    margin-left: 15px;
+    margin : 5px auto 0px auto;
     height : 30px;
     width : 150px;
+    margin-top  : 5px;
 }
 
-form{
-    margin:auto;
-}
+
 
 
 h1{
@@ -72,6 +83,10 @@ h1{
 
     .tempform{
         margin: 15px auto 0px auto;
+      }
+
+      .tempform2{
+          margin: 15px auto 0px 120px;
       }
 
 .tempunit{
@@ -117,3 +132,14 @@ footer{
 
 
 }
+
+#formcontainer1{
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+}
+
+#formcontainer2,#form1,#form2{
+    @extend #formcontainer1;
+}
+

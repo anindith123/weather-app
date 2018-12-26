@@ -1,9 +1,22 @@
-/* line 5, E:/udemy/react wheather/weather/src/styles/styles.scss */
+/* line 5, E:/udemy/react wheather/weather/src/styles/scss/styles.scss */
 .aligned, .topbar, .topData, .bottomData, footer, .alert {
   text-align: center;
 }
 
-/* line 11, E:/udemy/react wheather/weather/src/styles/styles.scss */
+@media (min-width: 768px) {
+  /* line 10, E:/udemy/react wheather/weather/src/styles/scss/styles.scss */
+  .compare {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+  }
+}
+
+/* line 20, E:/udemy/react wheather/weather/src/styles/scss/styles.scss */
+.nocompare, .compare {
+  display: grid;
+}
+
+/* line 26, E:/udemy/react wheather/weather/src/styles/scss/styles.scss */
 .topbar {
   margin: -80px 0px 35px 0px;
   height: 350px;
@@ -12,107 +25,104 @@
   background-image: url("media/bgground2.jpg");
   background-position: center;
   color: #9eb2da;
+  text-overflow: ellipsis;
 }
 
-/* line 22, E:/udemy/react wheather/weather/src/styles/styles.scss */
+/* line 38, E:/udemy/react wheather/weather/src/styles/scss/styles.scss */
 .temp {
   font-size: 45px;
 }
 
-/* line 26, E:/udemy/react wheather/weather/src/styles/styles.scss */
+/* line 42, E:/udemy/react wheather/weather/src/styles/scss/styles.scss */
 .topData {
   font-family: "Exo", sans-serif;
 }
 
-/* line 31, E:/udemy/react wheather/weather/src/styles/styles.scss */
+/* line 47, E:/udemy/react wheather/weather/src/styles/scss/styles.scss */
 .weather {
   font-size: 28px;
   margin-top: -15px;
 }
 
-/* line 36, E:/udemy/react wheather/weather/src/styles/styles.scss */
+/* line 52, E:/udemy/react wheather/weather/src/styles/scss/styles.scss */
 .bottomData {
   margin-top: 50px;
   font-family: "Exo", sans-serif;
   font-size: 20px;
 }
 
-/* line 43, E:/udemy/react wheather/weather/src/styles/styles.scss */
-.inputForm {
-  display: flex;
-}
-
-/* line 48, E:/udemy/react wheather/weather/src/styles/styles.scss */
+/* line 60, E:/udemy/react wheather/weather/src/styles/scss/styles.scss */
 .inputbox {
   height: 20px;
   width: 300px;
 }
 
-/* line 53, E:/udemy/react wheather/weather/src/styles/styles.scss */
+/* line 65, E:/udemy/react wheather/weather/src/styles/scss/styles.scss */
 .submitbutton {
   background-color: #6a99c6;
   color: white;
   border: none;
   border-radius: 5%;
-  margin-left: 15px;
+  margin: 5px auto 0px auto;
   height: 30px;
   width: 150px;
+  margin-top: 5px;
 }
 
-/* line 63, E:/udemy/react wheather/weather/src/styles/styles.scss */
-form {
-  margin: auto;
-}
-
-/* line 68, E:/udemy/react wheather/weather/src/styles/styles.scss */
+/* line 79, E:/udemy/react wheather/weather/src/styles/scss/styles.scss */
 h1 {
   font-family: 'Goudy Bookletter 1911', serif;
   font-size: 50px;
 }
 
-/* line 73, E:/udemy/react wheather/weather/src/styles/styles.scss */
+/* line 84, E:/udemy/react wheather/weather/src/styles/scss/styles.scss */
 .tempform {
   margin: 15px auto 0px auto;
 }
 
-/* line 77, E:/udemy/react wheather/weather/src/styles/styles.scss */
+/* line 88, E:/udemy/react wheather/weather/src/styles/scss/styles.scss */
+.tempform2 {
+  margin: 15px auto 0px 120px;
+}
+
+/* line 92, E:/udemy/react wheather/weather/src/styles/scss/styles.scss */
 .tempunit, .tempunitc {
   border-radius: 3px;
   height: 25px;
 }
 
-/* line 82, E:/udemy/react wheather/weather/src/styles/styles.scss */
+/* line 97, E:/udemy/react wheather/weather/src/styles/scss/styles.scss */
 .tempunitc {
   margin-left: 5px;
 }
 
-/* line 87, E:/udemy/react wheather/weather/src/styles/styles.scss */
+/* line 102, E:/udemy/react wheather/weather/src/styles/scss/styles.scss */
 .active {
   background-color: #4e6f8f;
   color: white;
   border: none;
 }
 
-/* line 93, E:/udemy/react wheather/weather/src/styles/styles.scss */
+/* line 108, E:/udemy/react wheather/weather/src/styles/scss/styles.scss */
 .notactive {
   background-color: white;
   color: black;
   border: 1px solid black;
 }
 
-/* line 99, E:/udemy/react wheather/weather/src/styles/styles.scss */
+/* line 114, E:/udemy/react wheather/weather/src/styles/scss/styles.scss */
 footer {
   margin: 100px auto 0px auto;
   background-color: orangered;
   color: black;
 }
 
-/* line 106, E:/udemy/react wheather/weather/src/styles/styles.scss */
+/* line 121, E:/udemy/react wheather/weather/src/styles/scss/styles.scss */
 #root {
   height: 22vh;
 }
 
-/* line 110, E:/udemy/react wheather/weather/src/styles/styles.scss */
+/* line 125, E:/udemy/react wheather/weather/src/styles/scss/styles.scss */
 .alert {
   height: 20px;
   margin-bottom: 100px auto 10px auto;
@@ -121,4 +131,11 @@ footer {
   border-radius: 5%;
 }
 
-/*# sourceMappingURL=../../styles.map */
+/* line 136, E:/udemy/react wheather/weather/src/styles/scss/styles.scss */
+#formcontainer1, #formcontainer2, #form1, #form2 {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+/*# sourceMappingURL=../styles.map */

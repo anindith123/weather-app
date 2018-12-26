@@ -63,56 +63,57 @@ class Front extends Component {
         div.className = "alert";
         div.appendChild(document.createTextNode('Enter city name'));
         const container = document.querySelector('#'.concat('', ((tar) === 'form1' ? 'formcontainer1' : 'formcontainer2')));
-        const form = document.querySelector('#'.concat('', ((tar) === 'form1' ? 'inputform1' : 'inputform2')));
+        const form = document.querySelector('#'.concat('', ((tar) === 'form1' ? 'form1' : 'form2')));
         container.insertBefore(div, form);
         setTimeout(() => document.querySelector('.alert').remove(),3000);
 
     }
 
     render() {
-        return <div style={{ display: " ".concat('', ((this.state.compare) ? "flex" : "grid")) }}>
-            <div id="formcontainer1" style={{ margin: "auto" }}>
-                <div id="inputform1" className="inputForm">
-                    <form name="form1" onSubmit={this.formSubmit} >
+        return <div className={((this.state.compare) ? "compare" : "nocompare")}>
+            <div id="formcontainer1">
+                {/*<div id="inputform1" className="inputForm">*/}
+                    <form name="form1" id="form1" onSubmit={this.formSubmit} >
 
                         <input className="inputbox" type="text" name="city" placeholder="city" />
 
                         <button className="submitbutton" type="submit" value="submit">Get weather</button>
 
-                    </form></div>
-                <div className="inputForm">
+                    </form>
+                
+                {/*<div className="inputForm">*/}
                     <div className="tempform">
                         <button name="temp1" className={"tempunit".concat(' ', ((this.state.unit1) === "imperial" ? "active" : "notactive"))} type="button" onClick={this.fareinclick} value="fareinheit">F{'\u00b0'}</button>
                         <button name="temp1" className={"tempunitc".concat(' ', ((this.state.unit1) === "metric" ? "active" : "notactive"))} type="button" onClick={this.celciusclick} value="fareinheit">C{'\u00b0'}</button>
                         <button name="compare" className={"tempunitc".concat(' ', ((this.state.compare) ? "active" : "notactive"))} type="button" onClick={this.compareClick} value="Compare">Compare</button>
                     </div>
-                </div>
+                
                 <WeatherDesc citydata={this.state.citydata1} display={this.state.data_available1} />
             </div>
 
             {/*-------------------------------------------------------------------------------------------------------*/}
 
-            <div id="formcontainer2" style={{ margin: "auto", display: " ".concat('', ((this.state.compare) ? "block" : "none")) }}>
+            <div id="formcontainer2" style={{ display: " ".concat('', ((this.state.compare) ? "block" : "none")) }}>
             
-                <div id="inputform2" className="inputForm">
-                    <form name="form2" onSubmit={this.formSubmit} >
+                
+                    <form name="form2" id="form2" onSubmit={this.formSubmit} >
 
                         <input className="inputbox" type="text" name="city" placeholder="city" />
 
                         <button className="submitbutton" type="submit" value="submit">Get weather</button>
 
-                    </form></div>
-                <div style={{ margin: "auto" }}>
+                    </form>
+                
 
-                    <div className="inputForm">
-                        <div className="tempform">
+                   
+                        <div className="tempform2">
                             <button name="temp2" className={"tempunit".concat(' ', ((this.state.unit2) === "imperial" ? "active" : "notactive"))} type="button" onClick={this.fareinclick} value="fareinheit">F{'\u00b0'}</button>
                             <button name="temp2" className={"tempunitc".concat(' ', ((this.state.unit2) === "metric" ? "active" : "notactive"))} type="button" onClick={this.celciusclick} value="fareinheit">C{'\u00b0'}</button>
                         </div>
-                    </div>
+                   
                     <WeatherDesc citydata={this.state.citydata2} display={this.state.data_available2} />
-                </div>
-                </div>
+                
+            </div>
             
         </div>
 
